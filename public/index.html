@@ -1,57 +1,59 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>koki is a dev</title>
-    <style>
-      body {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100dvh;
-        margin: 0;
-        padding: 0;
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>koki is a dev</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100dvh;
+      margin: 0;
+      padding: 0;
+    }
+
+    .title {
+      align-items: center;
+      display: flex;
+      font-weight: normal;
+      gap: 8px;
+    }
+
+    .link {
+      text-decoration: none;
+    }
+
+    .img {
+      vertical-align: middle;
+      height: 120px;
+
+      &:hover {
+        animation: spin 1s linear infinite;
+      }
+    }
+
+    @keyframes spin {
+      from {
+        transform: rotate(0deg);
       }
 
-      .title {
-        align-items: center;
-        display: flex;
-        font-weight: normal;
-        gap: 8px;
+      to {
+        transform: rotate(360deg);
       }
+    }
+  </style>
+</head>
 
-      .link {
-        text-decoration: none;
-      }
+<body>
+  <h1 class="title">
+    <a class="link" href="https://koki.me" rel="noreferrer">
+      <img class="img" src="/assets/koki.png" alt="koki" />
+    </a>
+    is a dev
+  </h1>
+</body>
 
-      .img {
-        vertical-align: middle;
-        height: 120px;
-
-        &:hover {
-          animation: spin 1s linear infinite;
-        }
-      }
-
-      @keyframes spin {
-        from {
-          transform: rotate(0deg);
-        }
-
-        to {
-          transform: rotate(360deg);
-        }
-      }
-    </style>
-  </head>
-
-  <body>
-    <h1 class="title">
-      <a class="link" href="https://koki.me" rel="noreferrer">
-        <img class="img" src="/koki.png" alt="koki" />
-      </a>
-      is a dev
-    </h1>
-  </body>
 </html>
