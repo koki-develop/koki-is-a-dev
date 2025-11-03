@@ -1,59 +1,91 @@
 <!doctype html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>koki is a dev</title>
-  <style>
-    body {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100dvh;
-      margin: 0;
-      padding: 0;
-    }
-
-    .title {
-      align-items: center;
-      display: flex;
-      font-weight: normal;
-      gap: 8px;
-    }
-
-    .link {
-      text-decoration: none;
-    }
-
-    .img {
-      vertical-align: middle;
-      height: 120px;
-
-      &:hover {
-        animation: spin 1s linear infinite;
-      }
-    }
-
-    @keyframes spin {
-      from {
-        transform: rotate(0deg);
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>koki is a dev</title>
+    <style>
+      body {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        height: 100dvh;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
       }
 
-      to {
-        transform: rotate(360deg);
+      a {
+        text-decoration: none;
       }
-    }
-  </style>
-</head>
 
-<body>
-  <h1 class="title">
-    <a class="link" href="https://koki.me" rel="noreferrer">
-      <img class="img" src="/assets/koki.png" alt="koki" />
-    </a>
-    is a dev
-  </h1>
-</body>
+      .title {
+        h1 {
+          align-items: center;
+          display: flex;
+          font-weight: normal;
+          gap: 8px;
+          margin-top: 0px;
+          margin-bottom: 8px;
+        }
 
+        img {
+          vertical-align: middle;
+          height: 120px;
+
+          &:hover {
+            animation: spin 1s linear infinite;
+          }
+        }
+      }
+
+      .socials {
+        display: flex;
+        gap: 16px;
+
+        a {
+          transition: opacity 0.15s;
+
+          &:hover {
+            opacity: 0.6;
+          }
+        }
+
+        img {
+          height: 36px;
+          vertical-align: middle;
+        }
+      }
+
+      @keyframes spin {
+        from {
+          transform: rotate(0deg);
+        }
+
+        to {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="title">
+      <h1>
+        <a href="https://koki.me" rel="noreferrer">
+          <img src="/assets/koki.png" alt="koki" />
+        </a>
+        is a dev
+      </h1>
+    </div>
+
+    <div class="socials">
+      <a href="https://github.com/koki-develop">
+        <img src="/assets/github.svg" alt="GitHub" />
+      </a>
+      <a href="https://x.com/koki_develop">
+        <img src="/assets/x.svg" alt="X" />
+      </a>
+    </div>
+  </body>
 </html>
